@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-
+  devise_for :users
+  root 'photos#index'
   # Routes for the Role resource:
   # CREATE
   get '/roles/new',      :controller => 'roles', :action => 'new',    :as => 'new_role'
